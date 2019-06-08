@@ -1,5 +1,6 @@
 function RegisterController(AuthService, $state) {
   var ctrl = this;
+
   ctrl.$onInit = function () {
     ctrl.error = null;
     ctrl.user = {
@@ -7,12 +8,14 @@ function RegisterController(AuthService, $state) {
       password: ''
     };
   };
+
   ctrl.createUser = function (event) {
     return AuthService
       .register(event.user)
       .then(function () {
+        // Redirect
         $state.go('app');
-      }, function (reason) {
+        }, function (reason) {
         ctrl.error = reason.message;
       });
   };

@@ -13,6 +13,7 @@ function LoginController(AuthService, $state) {
     return AuthService
       .login(event.user)
       .then(function () {
+        // Redirect
         $state.go('app');
       }, function (reason) {
         ctrl.error = reason.message;

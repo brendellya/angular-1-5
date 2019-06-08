@@ -1,0 +1,29 @@
+<div class="header">
+    <div class="header__fixed">
+        <div>
+
+            <!-- brand -->
+            <div class="header__brand">
+                Contacts
+                <a href="" class="header__button header__button--new-contact"
+                    ui-sref="new">
+                    <i class="material-icons">add_circle_outline</i>
+                    New Contact
+                </a>
+            </div>
+        </div>
+
+        <!-- logout -->
+        <div class="header__logout">
+            {{ ::$ctrl.user.email }}
+
+            <a href="" ng-clic>
+                <span class="header__button">
+                    <i class="material-icons">power_settings_new</i>
+                    Logout
+                </span>
+            </a>
+        </div>
+
+    </div>
+</div>
